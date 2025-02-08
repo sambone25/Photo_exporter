@@ -4,13 +4,13 @@ from google.oauth2 import service_account
 import os
 
 # Path to your Google API credentials JSON file
-CREDENTIALS_FILE = "credentials.json"
+CREDENTIALS_FILE = {"web":{"client_id":"752662108695-43ft9bci6rhpk9i6pl4kbegakag54677.apps.googleusercontent.com","project_id":"photo-exporter-450316","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"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","redirect_uris":["http://localhost"]}}
 
 # Folder containing your iCloud photos/videos
-LOCAL_FOLDER = "path/to/icloud/downloads"
+LOCAL_FOLDER = "/photos/#/recents"
 
 # Optional: Google Drive folder ID where files will be uploaded
-GDRIVE_FOLDER_ID = "your_google_drive_folder_id"  # Leave blank to upload to root
+GDRIVE_FOLDER_ID = "/drive/folders/1e7qMt9gLA2g9zhTpVFi4QLsSmPhv_4rM"  # Leave blank to upload to root
 
 # Authenticate and build the Drive API service
 SCOPES = ["https://www.googleapis.com/auth/drive.file"]
